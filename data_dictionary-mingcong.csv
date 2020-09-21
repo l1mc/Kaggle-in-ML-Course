@@ -1,0 +1,32 @@
+﻿No.,Name,Description,Range,unique value,type
+1,courier_id,The ID of the delivery-men,"[10007871, 125996858]",979,nominal
+2,date,The date when the obsevation was recorded. ,"[2020.2.1, 2020.2.27]",27,interval
+3,wave_index,"A wave is a series of action performed by a courier, including a series of delivery and pickup. In a 
+wave, a courier would have a bundle of orders (tracking_id). He would need to decide which item 
+to pick-up ﬁrst, whether to keep picking up items or to deliver some item ﬁrst.","[0, 16]",17,
+4,tracking_id,,"2.100070e+18, 2.100080e+18",2,
+5,courier_wave_start_lng,"It is the longitude  of the courier when he begins the wave. It should be a matter of 
+consideration given the bundle of actions to perform. Speciﬁcally, which item to pickup ﬁrst, and 
+what action should be taken right afterwards. Supposedly, in one wave, the longitude and 
+latitude should be unique.","[119.88, 122.26]",Continuous,interval
+6,courier_wave_start_lat,The starting latitude of that wave of a certain courier,"[36.06, 39.71]",Continuous,interval
+7,action_type,Delivery-man's choice: to pick up a new order or to deliver an old one,"delivery, pick up",2,nominal 
+8,group,,"2.020020e+16, 2.020020e+17, 2.020020e+18",3,
+9,level,The level of the courier,"[0, 3]",4,ordinal
+10,speed,The speed of the courier,"[3.01, 6.94]",Continuous,ratio
+11,max_load,The max load of the courier,"[1, 19]",16,ratio
+12,weather_grade,The weather condition of the order,"Bad Weather, Normal Weather, Slightly Bad Weather, Very Bad Weather",4,nominal
+13,aoi_id,The id of the Area of Interest (i.e. the delivery destination).,-- i.e. 0001e4c643b3623dea2a0e9bce7d15ad,34912,nominal
+14,shop_id,The id of the shop.,-- i.e. 00009e27a7938a119afe10d36649fa1d,11193,nominal
+15,id,,"[0, 509603]",509604,
+16,source_type,"The information of the courier’s previous action.
+'source_type' and 'target_type' are categorical values containing three values: 'Assign', 'PickFood', and 'DeliverFood'. When type is 'Assign', the location attributes represent the courier's location; When type is 'PickFood' the location attributes represent the vendor's location; When type is 'DeliverFood' the location attributes represent the customer's location.","ASSIGN, DELIVERY, PICKUP",3,nominal
+17,source_tracking_id,,"2.100070e+18, 2.100080e+18",2,
+18,source_lng,,"[119.88, 122.26]",Continuous,interval
+19,source_lat,,"[36.06, 39.71]",Continuous,interval
+20,target_lng,The geographical information of the target.,"[121.06, 122.26]",Continuous,interval
+21,target_lat,The geographical information of the target.,"[38.83, 39.70]",Continuous,interval
+22,grid_distance,The shortest traversable distance to the target provided by the GPS.the distance between the source and the target. this is a distance provided by maps,"[0, 429173]",Continuous,ratio
+23,expected_use_time,The outcome variable in the regression task,"[1, 9246]",Continuous,ratio
+24,urgency,Identifies how urgent the order is,"[-340771, 11345]",,
+25,hour,The hour in the day.,"[6, 23]",Continuous,interval
